@@ -1,0 +1,47 @@
+name: CI/CD Galeria de Artes
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build com Maven
+        run: mvn clean install
+
+      - name: Login no DockerHub (opcional)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build da imagem Docker
+        run: |
+          docker build -t galeria-artes .
+
+      - name: Push para DockerHub (opcional)
+        run: |
+          docker tag galeria-artes ${{ secrets.DOCKER_USERNAME }}/galeria-artes:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/galeria-artes:latest
+
+      - name: Deploy no Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'nome-do-seu-app-no-azure'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: '${{ secrets.DOCKER_USERNAME }}/galeria-artes:latest'

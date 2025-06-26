@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Build com Maven
+      - run: mvn clean package -DskipTests
+      - working-directory: ./artes
+
       - name: Checkout code
         uses: actions/checkout@v2
 

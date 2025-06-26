@@ -16,7 +16,7 @@ services:
       SPRING_JPA_SHOW_SQL: "true"
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
 
-  db:
+  db: 
     image: mysql:8
     container_name: galeria-db
     restart: always

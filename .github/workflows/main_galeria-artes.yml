@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Build com Maven
         run: mvn clean package -DskipTests
-        working-directory: ./artes
+        working-directory: artes
 
       - name: Checkout code
         uses: actions/checkout@v2

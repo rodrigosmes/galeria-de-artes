@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Build com Maven
-      - run: mvn clean package -DskipTests
-      - working-directory: ./artes
-
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Build com Maven
+        run: mvn clean package -DskipTests
+        working-directory: artes
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -30,8 +30,8 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v3
         with:
-          context: ./artes
-          file: ./artes/Dockerfile
+          context: artes
+          file: artes/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/galeria-artes:latest
 

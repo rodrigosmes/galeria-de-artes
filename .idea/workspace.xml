@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a26cb75-84f8-40b4-b9f2-5add8cca1a7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main_galeria-artes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main_galeria-artes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/galeria-de-artes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artes/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/artes/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +38,26 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rodri/galeria-de-artes/artes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rodri/galeria-de-artes&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="galeria-de-artes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="galeria-de-artes" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,6 +76,14 @@
       <updated>1750972055049</updated>
       <workItem from="1750972058103" duration="48000" />
       <workItem from="1750974300823" duration="201000" />
+      <workItem from="1750974981428" duration="18000" />
+      <workItem from="1750978178418" duration="5000" />
+      <workItem from="1750978192157" duration="28000" />
+      <workItem from="1750978240330" duration="24000" />
+      <workItem from="1750978378882" duration="51000" />
+      <workItem from="1750978464619" duration="16000" />
+      <workItem from="1750978522466" duration="17000" />
+      <workItem from="1750979454091" duration="10000" />
     </task>
     <servers />
   </component>

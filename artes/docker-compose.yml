@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: galeria-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://galeria.mysql.database.azure.com:3306/galeria?useSSL=true&requireSSL=true&verifyServerCertificate=false
+      SPRING_DATASOURCE_USERNAME: adm123
+      SPRING_DATASOURCE_PASSWORD: 12345678a@
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+
+  db:
+    image: mysql:8
+    container_name: galeria-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: galeria
+      MYSQL_USER: adm123  
+      MYSQL_ROOT_PASSWORD: 12345678a@
+    ports:
+      - "3306:3306"

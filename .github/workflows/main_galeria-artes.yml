@@ -26,10 +26,10 @@ jobs:
       - name: Build and push container image to Docker Hub
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./artes
+          file: ./artes/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/galeria-artes:${{ github.sha }}
-          file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
